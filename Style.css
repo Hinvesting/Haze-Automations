@@ -1,0 +1,130 @@
+body {
+    background-color: #2C3E50;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+h1, h2, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+section {
+    padding: 3rem 1rem;
+}
+.logo {
+    height: 6rem;
+    margin: 2rem auto;
+}
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+}
+.sub-headline {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+.cta-button {
+    background-color: #F1C40F;
+    color: #2C3E50;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #f39c12;
+}
+.demo-video {
+    max-width: 896px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 4rem 1rem;
+}
+.feature-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #F1C40F;
+    margin: 0 0 0.5rem 0;
+}
+.feature-item h4 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+}
+.feature-item p {
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+.creator {
+    background-color: #34495E;
+}
+.creator-image {
+    max-width: 768px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.final-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 2rem;
+}
+footer {
+    padding: 2rem 1rem;
+    border-top: 1px solid #34495E;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+.footer-links a {
+    color: #95a5a6;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+.footer-links a:hover {
+    color: #F1C40F;
+}
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7); display: flex;
+    justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content {
+    background-color: #2C3E50; padding: 2rem; border-radius: 12px;
+    border: 2px solid #F1C40F; position: relative; width: 90%; max-width: 500px;
+}
+.close-button {
+    position: absolute; top: 1rem; right: 1rem; background: none;
+    border: none; color: white; font-size: 2rem; cursor: pointer;
+}
+.modal-content h3 { margin-top: 0; margin-bottom: 2rem; }
+#email-form { display: flex; flex-direction: column; gap: 1rem; }
+#email-form input {
+    padding: 1rem; border-radius: 8px; border: 1px solid #7f8c8d;
+    background-color: #34495E; color: white; font-size: 1.1rem;
+}
+#email-form button {
+    background-color: #F1C40F; color: #2C3E50; border: none; padding: 1rem;
+    border-radius: 8px; font-size: 1.2rem; font-weight: 700; cursor: pointer;
+}
+@media (min-width: 768px) {
+    .features { grid-template-columns: repeat(3, 1fr); }
+}
