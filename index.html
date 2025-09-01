@@ -16,7 +16,7 @@
 <body class="bg-[#2C3E50] text-white flex items-center justify-center min-h-screen p-4">
 
     <div id="form-container" class="bg-[#34495E] p-8 rounded-xl shadow-2xl w-full max-w-lg">
-        <img src="[YOUR_LOGO_URL_HERE]" alt="NMM Logo" class="h-16 mx-auto mb-6">
+        <img src="https://newmoneymillionaires757.com/wp-content/uploads/Main-T-Haze-Automation.png" alt="NMM Logo" class="h-16 mx-auto mb-6">
         
         <h1 class="text-3xl font-bold text-center mb-2">Let's Talk AI & Automation</h1>
         <p class="text-center text-gray-300 mb-8">Great connecting with you. Fill out this quick form, and I'll personally send you some info next week.</p>
@@ -61,7 +61,6 @@
         const formContainer = document.getElementById('form-container');
         const successMessage = document.getElementById('success-message');
 
-        // --- PASTE YOUR NEW MAKE.COM WEBHOOK URL HERE ---
         const webhookUrl = "uj428wo6ncuhjj1nq55sf5vgq8trrms9@hook.us1.make.com";
         
         form.addEventListener('submit', async (e) => {
@@ -82,7 +81,6 @@
                     body: JSON.stringify(data),
                 });
                 
-                // Show success message
                 formContainer.style.display = 'none';
                 successMessage.style.display = 'block';
 
