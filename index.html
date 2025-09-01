@@ -11,6 +11,7 @@
     <style>
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        .hidden { display: none; } /* Added for our JS to toggle visibility */
     </style>
 </head>
 <body class="bg-[#2C3E50] text-white flex items-center justify-center min-h-screen p-4">
@@ -42,7 +43,11 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-
+            
+            <div id="other-details-container" class="hidden">
+                <label for="other-details" class="block text-sm font-semibold mb-2 text-gray-200">Please specify your challenge:</label>
+                <textarea name="other_details" id="other-details" rows="4" class="w-full bg-gray-800 border-gray-600 text-white rounded-lg p-3 focus:border-[#F1C40F] focus:ring-0"></textarea>
+            </div>
             <button type="submit" id="submit-button" class="w-full bg-[#F1C40F] hover:bg-[#D4AC0D] text-[#2C3E50] font-bold text-lg py-3 rounded-lg transition-all duration-300 disabled:bg-gray-500">
                 Send My Info
             </button>
@@ -60,6 +65,19 @@
         const submitButton = document.getElementById('submit-button');
         const formContainer = document.getElementById('form-container');
         const successMessage = document.getElementById('success-message');
+        
+        // START: New JavaScript to control the text area
+        const challengeDropdown = document.getElementById('challenge');
+        const otherDetailsContainer = document.getElementById('other-details-container');
+
+        challengeDropdown.addEventListener('change', function() {
+            if (this.value === 'Other') {
+                otherDetailsContainer.classList.remove('hidden');
+            } else {
+                otherDetailsContainer.classList.add('hidden');
+            }
+        });
+        // END: New JavaScript
 
         const webhookUrl = "https://hook.us1.make.com/wl66o4vlfr64k3sho2w85c3o1qcohzc3";
         
